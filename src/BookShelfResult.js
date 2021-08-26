@@ -4,7 +4,7 @@ import Book from "./Book";
 
 class BookShelf extends React.Component {
   render() {
-    const { books, shelfName, shelfType, moveBook } = this.props;
+    const { books, shelfName, moveBook } = this.props;
     console.log("FromBookShelf", books);
     return (
       <div className="bookshelf">
@@ -12,11 +12,9 @@ class BookShelf extends React.Component {
         <div className="bookshelf-books">
           <ol className="books-grid">
             <li>
-              {books
-                .filter((book) => book.shelf === shelfType)
-                .map((book, index) => (
-                  <Book key={index} book={book} moveBook={moveBook} />
-                ))}
+              {books.map((book, index) => (
+                <Book key={index} book={book} moveBook={moveBook} />
+              ))}
             </li>
           </ol>
         </div>

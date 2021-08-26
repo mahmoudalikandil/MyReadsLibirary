@@ -4,7 +4,7 @@ import BookShelfChanger from "./BookShelfChanger";
 
 class Book extends React.Component {
   render() {
-    const { moveBook, book } = this.props;
+    let { moveBook, book } = this.props;
 
     return (
       <li>

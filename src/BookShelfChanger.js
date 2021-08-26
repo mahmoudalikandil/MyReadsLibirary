@@ -1,5 +1,4 @@
 import React from "react";
-import * as BooksAPI from "./BooksAPI";
 class BookShelfChanger extends React.Component {
   changeValue = (event) => {
     const { moveBook, book } = this.props;
